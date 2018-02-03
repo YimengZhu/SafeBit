@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>SafeBid</title>
+</head>
+<body class="bg-light">
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal"><img src="img/logo.png" alt="" height="50"></h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">Home</a>
+        <a class="p-2 text-dark" href="#">Call for Bids</a>
+        <a class="p-2 text-dark" href="#">Information</a>
+    </nav>
+    <a class="btn btn-outline-primary" href="#">John Doe</a>
+</div>
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb float-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Call for Bids</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Submission</li>
+        </ol>
+    </nav>
+
+    <h2 class="display-5 py-2">Submit new Call for Bid</h2>
+
+    <hr>
+
+    <h4 class="mb-3">General</h4>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <form class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label>Title</label>
+                    <input type="text" class="form-control" placeholder="Instandsetzung Gaisburger Brücke" value="" required>
+                </div>
+
+                <div class="mb-3">
+                    <label>Description</label>
+                    <textarea class="form-control" rows="2"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label>Place of Execution</label>
+                    <input type="text" class="form-control" placeholder="70372 Stuttgart" value="" required>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label>Deadline</label>
+                <input type="text" class="form-control" placeholder="2018-02-22" value="" required>
+            </div>
+            <div class="mb-3">
+                <label>Links</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="https://www.meinauftrag.rib.de/public/publications/158478">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-secondary">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Classification</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Instandsetzungsarbeiten">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-secondary">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button type="button" class="btn btn-lg btn-primary float-right">Submit Call for Bid</button>
+
+    <div class="clearfix"></div>
+
+    <hr>
+
+    <h4 class="mb-3">Bill of Quantities</h4>
+
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th style="width:350px;" scope="col">Description</th>
+            <th scope="col">Type</th>
+            <th scope="col">Importance</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>
+                <input type="text" class="form-control" placeholder="" value="" required>
+            </td>
+            <td>
+                <textarea class="form-control" rows="2"></textarea>
+            </td>
+            <td>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>Price</option>
+                        <option>Grade</option>
+                    </select>
+                </div>
+            </td>
+            <td>
+                <input class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="10"/> 10%
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>
+                <input type="text" class="form-control" placeholder="" value="" required>
+            </td>
+            <td>
+                <textarea class="form-control" rows="2"></textarea>
+            </td>
+            <td>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>Price</option>
+                        <option>Grade</option>
+                    </select>
+                </div>
+            </td>
+            <td>
+                <input class="slider" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="15"/> 15%
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-secondary">Add new Item</button>
+    <button type="button" class="btn btn-secondary">Upload CSV file</button>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+            <li class="list-inline-item"><a href="#">API</a></li>
+            <li class="list-inline-item"><a href="#">Contact</a></li>
+            <li class="list-inline-item"><a href="#">Imprint</a></li>
+        </ul>
+    </footer>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
