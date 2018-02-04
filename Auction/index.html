@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <style>
+            body  {
+                background-image: url("./HackathonLogo.png");
+                background-color: #cccccc;
+            }
+
+
+            #div {
+                text-align: center;
+            }
+            #text {
+                width: 200px;
+            }
+            #button {
+                width: 200px;
+            }
+        </style>
+            <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+
+
+    </head>
+    <body>
+
+    <div>
+        <input id="name" type="textbox" value="name"><br/>
+        <input id="bid" type="textbox" value="bid"><br/>
+        <input id="button" type="button" onclick="myFunction()" value="submit" />
+        <script>
+            
+            function myFunction() {
+                name = document.getElementById("name").value;
+                bid = document.getElementById("bid").value;
+
+                var socket = io.connect('http://' + document.domain + ':' + location.port);
+                
+                socket.emit('my event', {data: {'name':name, 'bid' : bid}});
+    
+
+            }
+        </script>
+    </div>
+    </body>
+</html>
