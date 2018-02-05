@@ -36,7 +36,6 @@ def new_transaction():
 
 @socketio.on('my event')
 def test_message(message):
-    print(message['data']['bid'])
     message['data']['bid'] = hashlib.md5(str(message['data']['bid']).encode("utf-8")).hexdigest()
     print(message)
 

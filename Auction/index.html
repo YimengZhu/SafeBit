@@ -3,7 +3,6 @@
     <head>
         <style>
             body  {
-                background-image: url("./HackathonLogo.png");
                 background-color: #cccccc;
             }
 
@@ -20,19 +19,30 @@
         </style>
             <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
 
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 
     </head>
     <body>
 
     <div>
-        <input id="name" type="textbox" value="name"><br/>
-        <input id="bid" type="textbox" value="bid"><br/>
+        
+        <p>Sie sind eine Baufirma, die sich auf Technische Gebäudeausrüstung (TGA), insbesondere den Bau komplexer Starkstrom- und Haustechniksysteme spezialisiert hat. </p>
+        
+        <p>Sie wurden von Francis G., BER-Prokurist und -Baubereichsleiter, dazu eingeladen, bis heute 11 Uhr ein Angebot zur Ausführung des gesamten Brandschutzsystems beim Flughafen BER abzugeben.</p>
+
+        <p>Wie sie selbst bestens wissen, ist die Baubranche extrem fragmentiert und es gibt Deutschlandweit überhaupt nur 10 weitere TGA-Firmen, die in der Lage wären, solch einen großen Auftrag abzuwickeln und zur Angebotsabgabe aufgefordert wurden. Da in dieser Branche jeder jeden kennt, kennen Sie sogar die Firmen: Fa. Team 1, Fa. Team 2, Daimler Jury, Bosch Jury, LBBW Jury, …</p>
+        <p>Leider sind die Planungsunterlagen, die sie erhalten, dermaßen fehlerhaft und unvollständig, dass sie gar keine interne Kalkulation durchführen können - sie sind aber Brancheninsider und wissen, dass sie alle ihnen entstehenden Kosten für die Ausführung über Nachträge zurückbekommen werden. Daher können Sie frei einen Betrag x für den gilt 0 < x < 20 bieten und das niedrigste Angebot gewinnt. Falls Sie die Ausschreibung gewinnen, ist ihre Auszahlung x und Sie bekommen den vollen Betrag X bar von uns während unseres Pitches ausgezahlt.</p>
+        <p>Ihr Gebot wird direkt an die SafeBid Plattform gesendet, die vom chronisch klammen SafeBid-Team im Raum Stella (Geb. 58, EG, dritter Raum rechts) betrieben wird. Wir sind immer für einen Plausch zu haben - ganz besonders heute :-)</p>
+        <p>Ihr Team um Klaus Wowereit und das SafeBid-Team Frei nach dem Motto: ein paar Groschen haben noch keinem geschadet</p>
+        <p>Frei nach dem Motto: ein paar Groschen haben noch keinem geschadet</p>
+        Please enter first and last name: <input id="name" type="textbox"><br/>
+        Please enter bid 0 < x < 20: <input id="bid" type="textbox"><br/>
         <input id="button" type="button" onclick="myFunction()" value="submit" />
         <script>
             
             function myFunction() {
-                name = document.getElementById("name").value;
-                bid = document.getElementById("bid").value;
+                var name = document.getElementById("name").value;
+                var bid = document.getElementById("bid").value;
 
                 var socket = io.connect('http://' + document.domain + ':' + location.port);
                 
